@@ -15,3 +15,6 @@ x=a/b
 x=a*b
 
 #Rebase demo
+
+#Merge example demo
+
