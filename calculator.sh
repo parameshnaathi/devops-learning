@@ -8,3 +8,5 @@ x=a+b
 #substraction of 2 numbers
 x=a-b
 
+#Division of 2 numbers
+x=a/b
