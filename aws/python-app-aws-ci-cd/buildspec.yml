@@ -19,7 +19,7 @@ phases:
       - cd aws/python-app-aws-ci-cd/
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - echo "Docker Login successful"
+      - echo "Docker Login successful so we are good"
       - docker build -t "$DOCKER_REGISTRY_URL/parameshnaathi/simple-python-flask-app:latest" .
       - docker push "$DOCKER_REGISTRY_URL/parameshnaathi/simple-python-flask-app:latest"
   post_build:
