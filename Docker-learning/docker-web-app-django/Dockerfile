@@ -19,8 +19,11 @@ RUN python3 -m venv venv
 # Activate the virtual environment and install dependencies
 RUN . venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
 
-# Make sure the virtual environment's Python and pip are used
+# Ensure the virtual environment's Python and pip are used
 ENV PATH="/app/venv/bin:$PATH"
 
-# Run the command to start your application
-CMD ["python", "manage.py"]
+# Expose the port on which the app will run
+EXPOSE 8000
+
+# Run the Django development server
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
